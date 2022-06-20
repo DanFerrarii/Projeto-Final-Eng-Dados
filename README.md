@@ -1,6 +1,6 @@
 # Projeto Final - Engenharia de Dados - SoulCode Academy
 
-Projeto desenvolvido em equipe como critério de aprovação final do Curso de Engenharia de Dados pela Soul Code Academy.
+Projeto desenvolvido em equipe como critério de aprovação final do Curso de Engenharia de Dados pela SoulCode Academy.
 
 ## Equipe do projeto:
 
