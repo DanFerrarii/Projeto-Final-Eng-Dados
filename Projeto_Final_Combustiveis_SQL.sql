@@ -1,3 +1,4 @@
+--Criação tabela combustiveis
  CREATE TABLE combustiveis (
 	id int auto_increment PRIMARY KEY,
     Regiao_Sigla varchar(2),
@@ -18,12 +19,13 @@
     Bandeira varchar(100)
 );
 
+--Criação tabela combustiveis_log
 CREATE TABLE combustiveis_log(
 	id_log int auto_increment PRIMARY KEY,
 	data_log timestamp
 );
 
-
+--Criação de uma Trigger Function para preencher a tabela combustiveis_log
 DELIMITER $$
 USE `projeto-final`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `projeto-final`.`combustiveis_AFTER_INSERT` AFTER INSERT ON `combustiveis` FOR EACH ROW
@@ -31,6 +33,3 @@ BEGIN
 		INSERT INTO `projeto-final`.`combustiveis_log` (`data_log`) VALUES (current_timestamp);
 END$$
 DELIMITER ;
-
-select * from combustiveis;
-select * from combustiveis_log;
